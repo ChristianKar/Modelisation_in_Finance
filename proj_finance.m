@@ -14,12 +14,12 @@ x = zeros(t_max+1, 1);
 y = zeros(t_max+1, 1); 
 
 % Parameters: 
-load('parameters')
+load('parameters'); 
 
 % Initial Conditions 
-x(1) = 0 
+x(1) = 0; 
 y(1) = 0; 
 %% 
 % Modelling a Rulkov map needs functions 
-f = @(n, t, x) alpha ./ (1 + x(t).^n)
+f = @(n, t, x) alpha ./ (1 + x(t).^n); 
 
