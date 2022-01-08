@@ -13,7 +13,7 @@ n = 2;
 stl_data = importdata('STLFSI2.csv') 
 stl_timestamps = stl_data.textdata(2:end, 1); 
 stl_data = stl_data.data; 
-stl_data2 = timeseries(stl_data, 1:length(stl_data));
 
 
-save('parameters.mat', '-v7.3');
+
+save('parameters.mat');
