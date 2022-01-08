@@ -10,7 +10,7 @@ clc;
 
 %% Initialising our Rulkov vectors
 % Parameters: 
-load('test_parameters.mat'); 
+load('parameters.mat'); 
 
 t_max = length(stl_data); 
 
