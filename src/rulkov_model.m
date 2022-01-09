@@ -10,7 +10,7 @@ clc;
 
 %% Initialising our Rulkov vectors
 % Parameters: 
-load('parameters.mat'); 
+load('../utils/test_parameters.mat'); 
 
 t_max = length(stl_data); 
 
@@ -23,9 +23,9 @@ y(1) = stl_data(1);
 %delta = ; 
 %% 
 % Modelling a Rulkov m% Determined by the number of timestamps/data that we have
-f = @(t, x) alpha ./ (1 + x(t).^n);  
-for t=1:t_max% plot(f(1:t_max,x))
-    x(t+1) = f(t, x) + gamma*y(t) + stl_data(t); %stl_data(t)=delta; 
+f = @(t, x) alpha ./ (1 + x(t).^n);
+for t=1:t_max
+    x(t+1) = f(t, x) + gamma*y(t) + delta; %stl_data(t)=delta; 
     y(t+1) = beta * y(t) - mu * x(t) + eta(); % eta*randn() for the second model
 end
 

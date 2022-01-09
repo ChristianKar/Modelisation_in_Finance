@@ -1,11 +1,11 @@
 % Parameter file:
 % Taking the values from Table 3 in the paper.
-alpha = 1; 
-gamma = 0.5;
-delta = 1;
+alpha = 1.947; 
+gamma = -0.5;
+delta = -1;
 beta = 0.5;
-mu = 1;
-eta = 1;
+mu = 0.001;
+eta = 0.001;
 n = 2;
 
 % Loading the time-series data from STLouis

@@ -3,7 +3,7 @@ clc;
 clear all;
 %% Loading Data
 % Let's get the parameters for the case highlighted in the paper.
-load('parameters.mat'); 
+load('../utils/parameters.mat'); 
 
 %% Equilibrium Points
 % This creates the polynomial whose roots are the equilibrium points of our
@@ -19,7 +19,7 @@ eigenvalues = zeros(length(eq_points), 3);
 for idx = 1:length(eq_points)
     eq_point = eq_points(idx);
     fprintf("For eq_point: %f\n", eq_point); 
-    big_term = 2*eq_point*alpha/(1+eq_point^2); 
+    big_term = 2*eq_point*alpha/((1+eq_point^2)^2); 
     Jac_coeffs = [1, -beta-big_term, - alpha*beta*big_term +gamma*mu]; 
     eigenvalues(idx, :) = roots(Jac_coeffs); 
     fprintf("We have eigenvalues: [%f, %f, %f] \n", eigenvalues(idx, :));
