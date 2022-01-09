@@ -24,7 +24,7 @@ x = zeros(t_max+1, 1);
 % Initial Conditions 
 x(1) = stl_data(1);
 y(1) = stl_data(1);
-%0.2felta = ; 
+%delta = ; 
 %% 
 % Modelling a Rulkov m% Determined by the number of timestamps/data that we have
 f = @(t, x) alpha ./ (1 + x(t).^n);
@@ -38,8 +38,6 @@ plot(1:3:(t_max+1), x(1:3:end));
 plot(1:3:(t_max+1), y(1:3:end));
 legend("x_t","y_t", 'Location', 'best')
 title('Chaotic Rulkov Map: Dynamics')
-annot_str = sprintf(' α=%0.2f γ=%0.2f\n δ=%0.2f β=%0.2f\n μ=%0.3f η=%0.2f\n n=%0.2f\n', ...
-    alpha, gamma, delta, beta, mu, eta, n) ;
-dim = [.2 .5 .4 .4];
-annotation('textbox',dim,'String',annot_str,'FitBoxToText','on');
+annot_str = sprintf('\alpha %d ')
+annotation('textbox',dim,'String',str,'FitBoxToText','on');
 grid on ; 
