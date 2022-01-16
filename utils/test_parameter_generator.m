@@ -1,6 +1,6 @@
 % Parameter file:
 % Taking the values from Table 3 in the paper.
-alpha = 4.2;%1.947; 
+alpha = 20;%1.947; 
 gamma = -0.5;
 delta = -0.5;
 beta =1;

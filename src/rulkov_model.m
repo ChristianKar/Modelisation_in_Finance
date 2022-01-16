@@ -34,12 +34,14 @@ for t=1:t_max
 end
 
 hold on; 
-plot(1:3:(t_max+1), x(1:3:end));
-plot(1:3:(t_max+1), y(1:3:end));
-legend("x_t","y_t", 'Location', 'best')
+time = 1:(t_max+1);
+plot(time, x(time));
+plot(time, y(time));
+legend("x_t","y_t", 'Location', 'northeast', 'fontsize', 16)
 title('Chaotic Rulkov Map: Dynamics')
-annot_str = sprintf(' α=%0.2f γ=%0.2f\n δ=%0.2f β=%0.2f\n μ=%0.3f η=%0.2f\n n=%0.2f\n', ...
-    alpha, gamma, delta, beta, mu, eta, n) ;
+annot_str = sprintf(' α=%0.2f', ...
+    alpha) ;
 dim = [.2 .5 .4 .4];
-annotation('textbox',dim,'String',annot_str,'FitBoxToText','on');
+annotation('textbox',dim,'String',annot_str,'FitBoxToText','on', 'fontsize', 19);
 grid on ; 
+

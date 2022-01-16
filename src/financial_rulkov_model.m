@@ -50,3 +50,10 @@ disp("ERRORS: ");
 fprintf( "RMS Error: %f\n", RMSE(stl_data, x) ); 
 fprintf("NRMS Error: %f\n", NRMSE(stl_data, x)); 
 fprintf("MAP Error: %f\n", MAPE(stl_data, x)); 
+
+%% Error Map 
+abs_error = abs(x - stl_data); 
+plot(abs_error, 'r')
+grid on; 
+title("Financial Rulkov Model: Absolute Error");  
+xlabel("Time"); ylabel("|x(t) - stl\_data(t)|"); 
