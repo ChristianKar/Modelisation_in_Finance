@@ -1,5 +1,5 @@
 # modelisation-finance
-
+ 
 This project is for our Modèlisation Project on Finance, where we implement Rulkov Maps to model St. Louis Fed Financial Stress Index data (STLFSI2) and analyse the map as a non-linear, discrete-time state-space model in its own right.
 
 All code is neatly partitioned into the following folders: 
